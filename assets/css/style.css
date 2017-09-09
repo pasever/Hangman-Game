@@ -1,0 +1,46 @@
+
+body {
+	font-size: 14.5px;
+	padding-top: 5px;
+	opacity: 100% !important;
+	line-height: 1.52947;
+	background: #3E5368;
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+}
+
+h1,h2, h3, h4 {
+	color: white;
+}
+
+a {
+	outline: none;
+}
+
+.navbar-brand {
+	font-size: 1.75em !important;
+	font-weight: bold;
+}
+
+.nav li {
+	font-size: 1.25em !important;
+	font-weight: normal;
+}
+
+section p {
+	line-height: 190%;
+}
+
+p {
+	color: white;
+}
+
+aside {
+	margin-top: 5px;
+	background: #3E5368;
+}
+
+#panel-body {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
