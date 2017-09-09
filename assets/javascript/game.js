@@ -9,7 +9,6 @@ var moviesArray = ["The Godfather", "The Shawshank Redemption", "Schindler's Li
 				   "Doctor Zhivago", "The Searchers", "Jaws"]
 
 
-var 
 
 
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
