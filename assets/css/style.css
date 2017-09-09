@@ -15,6 +15,7 @@ body {
 button {
 	width: 75px;
 	height: 75px;
+	margin: 1px;
 }
 h1,h2, h3, h4 {
 	color: white;
