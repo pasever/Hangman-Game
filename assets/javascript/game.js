@@ -11,19 +11,20 @@ var moviesArray = ["The Godfather", "The Shawshank Redemption", "Schindler's Li
 
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
 var randomWordArray = [];
-console.log(randomWord);
 
-console.log(randomWord.length)
+function generate() {
 
-for (i=0; i < randomWord.length; i++) {
+	for (i=0; i < randomWord.length; i++) {
 
-	var button = document.createElement("button");
-    button.innerHTML = "";
-    document.getElementById('blocks').appendChild(button);
+		var button = document.createElement("button");
+	    button.innerHTML = "";
+	    document.getElementById('blocks').appendChild(button);
+	}
 }
-
-
-
+    
+document.getElementById("startingButton").onclick = function() {
+    generate();
+}
 
 
 

@@ -12,12 +12,25 @@ body {
 	margin-top: 25px;
 }
 
+.hints {
+
+	width: 50%;
+}
+
+#startingButton {
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	position: center;
+
+}
+
 button {
 	width: 75px;
 	height: 75px;
 	margin: 1px;
 }
-h1,h2, h3, h4 {
+h1, h2, h3, h4 {
 	color: white;
 }
 
