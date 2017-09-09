@@ -5,6 +5,10 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+          crossorigin="anonymous"></script>
+      
 
   <title>My Portfolio: Evgheni Pascalov</title>
 
@@ -37,33 +41,38 @@
     
     <div class="row">
     	
-      <div class="col-md-3">
-        	<p><h1>Statistics:</h1></p>
-
-        	<h4>Wins: </h4>
-        	<h4>Remaining gueses: </h4>
-        	<h4>Letters guessed: </h4>
+      <div class="col-md-2">
+          	<p><h1>Statistics:</h1></p>
+            <div class="colContent">
+                <h4>Wins: </h4>
+              	<h4>Remaining gueses: </h4>
+              	<h4>Letters guessed: </h4>
+            </div>  
     	</div>
 
   		<div class="col-md-8">
-      			<div class="blocks" id="blocks">
-      			<p><h1>Best Movies of all times:</h1></p>
-
-          <button id="startingButton">Start the Game! Generate the word</button>
-  		</div>
+          <div class="blocks" id="blocks">
+              <p><h1>Best Movies of all times:</h1></p>
+              <div class="colContent">
+                    <div class="wrapper">
+                        <button id="startingButton">Start the Game! Generate the word</button>
+                    </div>
+              </div>
+          </div>
+      </div>
 			
 
-  		<div class="col-md-1">
-    		<h4>Key pressed: </h4>
-        <div>
-          <button class="hints">Hint 1</button>
-          <button class="hints">Hint 2</button>
-          <button class="hints">Hint 3</button>
-        </div>
+  		<div class="col-md-2">
+          		<h1>Additionaly:</h1>
+        <div class="colContent">
+              <div>
+                <button class="hints">Hint 1</button>
+                <button class="hints">Hint 2</button>
+                <button class="hints">Hint 3</button>
+              </div>
+        </div>    
       </div>
-
     </div>
-  
   <div class="push"></div>
 
 </div>
@@ -73,9 +82,6 @@
       <p class="text-center">&copy; Copyright 2017 Evgheni Pascalov</p>
    
   </footer>
-
-  <!-- jQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
   <!-- Bootstrap JavaScript CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

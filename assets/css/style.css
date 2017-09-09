@@ -6,23 +6,34 @@ body {
 	line-height: 1.52947;
 	background: #3E5368;
 	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+	margin-bottom: 50px;
 }
 
-.row {
-	margin-top: 25px;
+.footer {
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  padding: 25px 0;
+}
+.colContent {
+	padding-top: 50px;
 }
 
 .hints {
 
-	width: 50%;
+	width: 100%;
+	height: 50px;
+}
+
+.wrapper {
+    text-align: center;
 }
 
 #startingButton {
 	width: 450px;
 	height: 50px;
 	text-align: center;
-	position: center;
-
 }
 
 button {
@@ -30,8 +41,10 @@ button {
 	height: 75px;
 	margin: 1px;
 }
+
 h1, h2, h3, h4 {
 	color: white;
+	text-align: center;
 }
 
 a {

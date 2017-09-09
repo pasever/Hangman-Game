@@ -9,6 +9,9 @@ var moviesArray = ["The Godfather", "The Shawshank Redemption", "Schindler's Li
 				   "Doctor Zhivago", "The Searchers", "Jaws"]
 
 
+var 
+
+
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
 var randomWordArray = [];
 
@@ -18,13 +21,18 @@ function generate() {
 
 		var button = document.createElement("button");
 	    button.innerHTML = "";
+	    if (randomWord[i] != "") {}
 	    document.getElementById('blocks').appendChild(button);
 	}
+	
 }
     
-document.getElementById("startingButton").onclick = function() {
-    generate();
-}
+
+$("#startingButton").on("click", function() {
+	generate();
+	$("#startingButton").remove();
+
+});
 
 
 
