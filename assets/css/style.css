@@ -17,7 +17,7 @@ body {
   padding: 25px 0;
 }
 .colContent {
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 .hints {
@@ -60,7 +60,14 @@ a {
 	font-size: 1.25em !important;
 	font-weight: normal;
 }
+.keyDisplayed {
+	width: 120px;
+	height: 120px;
+	margin:auto;
+    display:block;
+	
 
+}
 section p {
 	line-height: 190%;
 }
