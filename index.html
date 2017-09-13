@@ -29,66 +29,91 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="index.html">About</a></li>
-	        <li><a href="portfolio.html">Portfolio</a></li>
-	        <li><a href="contact.html">Contact</a></li>
+	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/index.html">About</a></li>
+	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a></li>
+	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/contact.html">Contact</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
 
-<div class="container">
+<div class="container-fluid">
     
     <div class="row">
-    	
+    	<!-- left size of the container where statistics goes-->
       <div class="col-md-2">
           	<p><h1>Statistics:</h1></p>
             <div class="colContent">
-                <h4>Wins: </h4>
-              	<h4>Remaining gueses: </h4>
-              	<h4>Letters guessed: </h4>
+                <h4>Overall Wins: </h4>
+                <h4 id="winsCounter">0</h4>
+              	<h4 id="remainingGuesses">Remaining gueses: </h4>
+                <h4>10</h4>
             </div>  
-    	</div>
-
+    	</div><!--/left side ends-->
+      
+      <!-- main container with the random word-->
   		<div class="col-md-8">
           <div class="blocks" id="blocks">
-              <p><h1>Best Movies of all times:</h1></p>
+              <p><h1>Best Movies of All Time:</h1></p>
               <div class="colContent">
-                    <div class="wrapper">
+                    <div class="wrapper" id="finalWord">
                         <button id="startingButton">Start the Game! Generate the word</button>
                     </div>
               </div>
           </div>
-      </div>
+      </div><!-- /main container ends-->
 			
-
-  		<div class="col-md-2">
-          		<h1>Additionaly:</h1>
+      <!-- right size of the container where extra goes-->
+  	 	<div class="col-md-2">
+          		<h1>Extra:</h1>
         <div class="colContent">
-            <button class="keyDisplayed"></button>
-            <h1>Hints:</h1>
+            <h4>Letters Guessed:</h4>
+            <h4><span id="lettersGuessed">0</span></h4>
+              </br>
+                <h1>Hints:</h1>
+              </br>
               <div>
                 <button class="hints">Hint 1</button>
                 <button class="hints">Hint 2</button>
                 <button class="hints">Hint 3</button>
               </div>
-
         </div>    
-      </div>
+      </div> <!-- /right size container ends-->
+
     </div>
+  
   <div class="push"></div>
 
 </div>
 
+<!-- container for the alphabet -->
+<div class="container">
+    <div class="row">
+    
+    <div class="col-md-1">
+    </div>
+        
+        <div class="col-md-10"> 
+            <div id="alphabetHolder">
+              <h4>Alphabet:</h4>
+            </div>       
+        </div>
+     <div class="col-md-1"> 
+     </div>   
+    </div>
+</div><!-- /alpabet container ends-->
+
+<!-- footer start--> 
   <footer class="footer">
     
       <p class="text-center">&copy; Copyright 2017 Evgheni Pascalov</p>
    
-  </footer>
+  </footer><!-- /footer ends-->
 
   <!-- Bootstrap JavaScript CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="assets/javascript/game.js"></script>
+  <script src="assets/javascript/keyboard.js"></script>
 </body>
 
 </html>
