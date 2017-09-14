@@ -1,9 +1,9 @@
 var moviesArray = ["The Godfather", "The Shawshank Redemption", "Schindler's List", "Raging Bull", "Casablanca", "Citizen Kane", "Gone with the Wind", 
 				   "The Wizard of Oz", "One Flew Over the Cuckoo's Nest", "Lawrence of Arabia", "Vertigo", "Psycho", "The Godfather Part II", "On the Waterfront", 
-				   "Sunset Blvd", "Forrest Gump", "The Sound of Music", "Angry Men", "West Side Story", "Star Wars: A New Hope", "A Space Odyssey", 
-				   "E T the Extra-Terrestrial", "The Silence of the Lambs", "Chinatown", "The Bridge on the River Kwai", "Singing in the Rain", 
+				   "Sunset Blvd", "Forrest Gump", "The Sound of Music", "Angry Men", "West Side Story", "Star Wars A New Hope", "A Space Odyssey", 
+				   "E T the Extra Terrestrial", "The Silence of the Lambs", "Chinatown", "The Bridge on the River Kwai", "Singing in the Rain", 
 				   "It is a Wonderful Life", "Dr Strangelove or How I Learned to Stop Worrying and Love the Bomb", "Some Like It Hot", "Ben Hur", 
-				   "Apocalypse Now", "Amadeus", "The Lord of the Rings: The Return of the King", "Gladiator", "Titanic", "From Here to Eternity", 
+				   "Apocalypse Now", "Amadeus", "The Lord of the Rings The Return of the King", "Gladiator", "Titanic", "From Here to Eternity", 
 				   "Saving Private Ryan", "Unforgiven", "Raiders of the Lost Ark", "Rocky", "A Streetcar Named Desire", "The Philadelphia Story", 
 				   "To Kill a Mockingbird", "An American in Paris", "The Best Years of Our Lives", "My Fair Lady", "A Clockwork Orange", 
 				   "Doctor Zhivago", "The Searchers", "Jaws"]
@@ -12,7 +12,7 @@ var moviesArray = ["The Godfather", "The Shawshank Redemption", "Schindler's Li
 var wordInProgress = [];
 var remainingGuesses = 10;
 var winsCounter = 0;
-var lettersGuessed = "";
+var lettersGuessed = 0;
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
 var randomWordArray = [];
 randomWord = randomWord.toUpperCase();
@@ -38,6 +38,7 @@ function generate() {
 			wordInProgress.push(button);
 		    
 		    document.getElementById('blocks').appendChild(button);
+		    // console.log(remainingGuesses);
 
 		}
 		
@@ -53,6 +54,17 @@ $("#startingButton").on("click", function() {
 
 });
 
+// accepts the key press and saves the guess into a value
+document.onkeyup = function(event){
+
+	var guess = String.fromCharCode(event.keyCode).toUpperCase();
+
+	console.log(guess);
+	correctGuess(guess);
+	incorrectGuess(guess);
+}
+
+
 // checked if the pressed button is correct 
 function correctGuess(letter) {
 
@@ -60,12 +72,20 @@ function correctGuess(letter) {
 
 	// Replace all letters that were guessed correctly with the correct letter
 	for (var i = 0; i < randomWord.length; i++) {
+		var repeatLetter =[];
 
 		if (randomWord.charAt(i) === ' ') continue;
 
 		if (randomWord.charAt(i) === letter) {
 			wordInProgress[cur].innerHTML = letter;
-			//document.getElementById("finalWord").innerHtml = wordInProgress.join('');
+			lettersGuessed = lettersGuessed + 1;
+			console.log(lettersGuessed);
+			//letter += letter.className("boldLetter");
+			//document.getElementByClassName("boldLetter").innerHtml ;
+			document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
+
+			
+
 		}
 
 		cur++;
@@ -73,20 +93,36 @@ function correctGuess(letter) {
 	}
 		
 }			
-			
-// accepts the key press and saves the guess into a value
-document.onkeyup = function(event){
+	
+//if the pressed button is incorrect 
+function incorrectGuess(letter) {
+	for (var i = 0; i < randomWord.lenght; i++) {
 
-	var guess = String.fromCharCode(event.keyCode).toUpperCase();
+		if (randomWord.chartAt(i) !== letter) {
+			remainingGuesses = remainingGuesses -1;
+			document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
+			console.log(remainingGuesses);
 
-	console.log(guess);
+		}
 
-	correctGuess(guess);
-}	
+	}
+
+
+
+
+}		
+
+
+
+
+
+
 
 // Checks if the word is complete
-if (wordInProgress == randomWord) {
+if (wordInProgress === randomWord) {
+			alert("You won");
 			winsCounter++;
+			console.log(winsCounter);
 	//somehow have to restart the game or add a reset button 		
 		}
 

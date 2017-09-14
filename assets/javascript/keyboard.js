@@ -20,3 +20,13 @@ window.onload = function alphabetButtons() {
   }
 }
 */
+
+
+// var boldWord = document.querySelectorAll("button");
+
+// for (var i = 0; i < randomWord.lenght; i++) {
+  
+//   boldWord[i].className = "boldLetter";
+
+// } 
+  
