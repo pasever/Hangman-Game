@@ -13,10 +13,12 @@ var wordInProgress = [];
 var remainingGuesses = 10;
 var winsCounter = 0;
 var lettersGuessed = 0;
-var lettersGuessedArray = [];
+var lettersGuessedArray = ["blank"];
+var lettersIncorrectArray = [];
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
 var randomWordArray = [];
 randomWord = randomWord.toUpperCase();
+var wrongBool = false;
 
 
 
@@ -62,7 +64,7 @@ document.onkeyup = function(event){
 
 	console.log(guess);
 	correctGuess(guess);
-	incorrectGuess(guess);
+	
 }
 
 
@@ -86,13 +88,10 @@ function correctGuess(letter) {
 					lettersGuessedArray.push(letter);
 					console.log(lettersGuessed);
 					$('#lettersGuessed').html(lettersGuessed);
-				}
-
-
+					wrongBool = true;
+				} 
 			} 
-		
-			//letter += letter.className("boldLetter");
-			//document.getElementByClassName("boldLetter").innerHtml ;
+
 			document.getElementById("lettersGuessed").innerHTML = lettersGuessed;	
 
 		}
@@ -100,32 +99,14 @@ function correctGuess(letter) {
 		cur++;
 
 	}
-		
+	if (!wrongBool) {
+
+		remainingGuesses = remainingGuesses -1;
+		document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
+	}
+		wrongBool = false;
 }			
 	
-//if the pressed button is incorrect 
-function incorrectGuess(letter) {
-	for (var i = 0; i < randomWord.lenght; i++) {
-
-		if (randomWord.chartAt(i) != letter) {
-			remainingGuesses = remainingGuesses -1;
-			document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
-			console.log(remainingGuesses);
-
-		}
-
-	}
-
-
-
-
-}		
-
-
-
-
-
-
 
 // Checks if the word is complete
 if (wordInProgress === randomWord) {
@@ -135,32 +116,7 @@ if (wordInProgress === randomWord) {
 	//somehow have to restart the game or add a reset button 		
 		}
 
-
-
-
-
-
-
-
-// function (incorrectGuess) {
-// 		// Ignore if the guess has already been made
-// 		if (lettersGuessed.indexOf(guess) == -1) {
-// 			var letterSpan;
-
-// 			// Add guess to lettersGuessed variable
-// 			lettersGuessed += guess;
-
-// 			// If lettersGuessed has 1 or more guesses, add trailing space
-// 			// Else remove existing space
-// 			if (lettersGuessed.length > 1){
-// 				var spaceSpan = document.createElement("span");
-// 				spaceSpan.innerHTML = "&nbsp;&nbsp;";
-// 				document.getElementById("lettersGuessed").appendChild(spaceSpan);
-// 			} else {
-// 				document.getElementById("lettersGuessed").innerHTML = "";
-// 			}
-
-// 		}
+	}
 		
 
 // function(pushChanges) {
@@ -171,20 +127,10 @@ if (wordInProgress === randomWord) {
 // }
 
 
-
-
-
-
-// // check if pressed key is a letter 
-// /*
-// document.onkeyup = function letterChecker () {
-// 	if ()
-
-
 // } */
 
 // function(checkGuess) {
-// 	if (/a-zA-Z/.test(guess)) {
+// 	if (/A-Z/.test(guess)) {
 // 		if (wordObject.word.indexOf(guess) > -1 {
 // 			correctGuess(guess);
 // 		} else {
