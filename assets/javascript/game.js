@@ -13,6 +13,7 @@ var wordInProgress = [];
 var remainingGuesses = 10;
 var winsCounter = 0;
 var lettersGuessed = 0;
+var lettersGuessedArray = [];
 var randomWord = moviesArray[Math.floor(Math.random() * moviesArray.length)];
 var randomWordArray = [];
 randomWord = randomWord.toUpperCase();
@@ -72,19 +73,27 @@ function correctGuess(letter) {
 
 	// Replace all letters that were guessed correctly with the correct letter
 	for (var i = 0; i < randomWord.length; i++) {
-		var repeatLetter =[];
+		
 
 		if (randomWord.charAt(i) === ' ') continue;
 
 		if (randomWord.charAt(i) === letter) {
 			wordInProgress[cur].innerHTML = letter;
-			lettersGuessed = lettersGuessed + 1;
-			console.log(lettersGuessed);
+			// for loop that checks if letter is at index of lettersGuessedArray, if not 
+			for (var j = 0; j < lettersGuessedArray.length; j++){
+				if (lettersGuessedArray.indexOf(letter) == -1){
+					lettersGuessed = lettersGuessed + 1;
+					lettersGuessedArray.push(letter);
+					console.log(lettersGuessed);
+					$('#lettersGuessed').html(lettersGuessed);
+				}
+
+
+			} 
+		
 			//letter += letter.className("boldLetter");
 			//document.getElementByClassName("boldLetter").innerHtml ;
-			document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
-
-			
+			document.getElementById("lettersGuessed").innerHTML = lettersGuessed;	
 
 		}
 
@@ -98,7 +107,7 @@ function correctGuess(letter) {
 function incorrectGuess(letter) {
 	for (var i = 0; i < randomWord.lenght; i++) {
 
-		if (randomWord.chartAt(i) !== letter) {
+		if (randomWord.chartAt(i) != letter) {
 			remainingGuesses = remainingGuesses -1;
 			document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
 			console.log(remainingGuesses);
