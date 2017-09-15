@@ -9,16 +9,25 @@ body {
 }
 
 .footer {
- /* position: absolute; */
   bottom: 0;
   width: 100%;
   height: 50px;
   padding: 25px 0;
 }
 
+#blocks {
+	text-align: content;
+    font-size: 24px;
+	font-weight: bold;
+}
+
+#startingButton {
+	font-size: 18px;
+}
+
 .colContent {
 	padding-top: 40px;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
 
 .hints {
@@ -44,6 +53,7 @@ button {
 	margin: 1px;
 	display: inline-block;
 	vertical-align: middle;
+	font-weight: bold;
 }
 
 h1, h2, h3, h4 {
@@ -59,9 +69,6 @@ a {
 	margin-right: 37.5px;
 }
 
-#finalWord {
-	position: inline;
-}
 .navbar-brand {
 	font-size: 1.75em !important;
 	font-weight: bold;
@@ -81,13 +88,6 @@ a {
 }
 section p {
 	line-height: 190%;
-}
-
-
-button {
-	font-size: 20px;
-	font-weight: bold;
-	
 }
 
 p {

@@ -35,21 +35,16 @@ function generate() {
 		} else {
 
 			console.log(randomWord[i], randomWord[i] !== ' ');
-
 			var button = document.createElement("button");
-
-			wordInProgress.push(button);
-		    
+			wordInProgress.push(button);	    
 		    document.getElementById('blocks').appendChild(button);
-		    // console.log(remainingGuesses);
-
 		}
 		
 	}
 	
 }
    
-//starting button that/hides after click
+//starting button that hides after click
 $("#startingButton").on("click", function() {
 	
 	$("#startingButton").remove();
@@ -76,24 +71,23 @@ function correctGuess(letter) {
 	// Replace all letters that were guessed correctly with the correct letter
 	for (var i = 0; i < randomWord.length; i++) {
 		
-
 		if (randomWord.charAt(i) === ' ') continue;
 
 		if (randomWord.charAt(i) === letter) {
 			wordInProgress[cur].innerHTML = letter;
 			// for loop that checks if letter is at index of lettersGuessedArray, if not 
-			for (var j = 0; j < lettersGuessedArray.length; j++){
-				if (lettersGuessedArray.indexOf(letter) == -1){
+			for (var j = 0; j < lettersGuessedArray.length; j++) {
+				
+				if (lettersGuessedArray.indexOf(letter) == -1) {
+					
 					lettersGuessed = lettersGuessed + 1;
 					lettersGuessedArray.push(letter);
-					console.log(lettersGuessed);
 					$('#lettersGuessed').html(lettersGuessed);
 					wrongBool = true;
 				} 
 			} 
-
+			
 			document.getElementById("lettersGuessed").innerHTML = lettersGuessed;	
-
 		}
 
 		cur++;
@@ -106,7 +100,12 @@ function correctGuess(letter) {
 	}
 		wrongBool = false;
 }			
+
 	
+if ( remainingGuesses === 0 ) {
+
+	alert("You lost");
+}
 
 // Checks if the word is complete
 if (wordInProgress === randomWord) {
@@ -118,8 +117,6 @@ if (wordInProgress === randomWord) {
 
 
 
-// } */
-
 // function(checkGuess) {
 // 	if (/A-Z/.test(guess)) {
 // 		if (wordObject.word.indexOf(guess) > -1 {
@@ -130,7 +127,3 @@ if (wordInProgress === randomWord) {
 // 	}
 // }
 
-
-
-
-// */
