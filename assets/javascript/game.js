@@ -116,15 +116,6 @@ if (wordInProgress === randomWord) {
 	//somehow have to restart the game or add a reset button 		
 		}
 
-	}
-		
-
-// function(pushChanges) {
-// 		// Update all text fields
-// 		document.getElementById("winsCounter").innerHTML = winsCounter;
-// 		document.getElementById("wordInProgress").innerHTML = wordInProgress;
-// 		document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
-// }
 
 
 // } */
