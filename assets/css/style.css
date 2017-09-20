@@ -14,26 +14,33 @@ body {
   height: 50px;
   padding: 25px 0;
 }
+/*#alphabetHolder {
+    width: 300px;
+    height: 50px;
+    margin: auto 0;
+    margin-left: 34%;
+    
+}*/
 
 #blocks {
-	text-align: content;
-    font-size: 25px;
+/*	text-align: content;*/
+        font-size: 25px;
 	font-weight: bold;
 }
 
-#startingButton {
-	font-size: 18px;
-}
-
 .colContent {
-	padding-top: 40px;
+	padding-top: 2%;
 	margin: 0 auto;	
 }
 
-.hints {
+.hintsLeft, .hintsRight {
 
-	width: 100%;
+	width: 80%;
 	height: 50px;
+        float: left;
+}
+.hintsRight {
+    float: right;
 }
 
 .wrapper {
@@ -45,6 +52,7 @@ body {
 	width: 450px;
 	height: 50px;
 	text-align: center;
+        font-size: 18px;
 }
 
 button {
@@ -56,10 +64,13 @@ button {
 	font-weight: bold;
 }
 
-h1, h2, h3, h4 {
+h1, h3, h4 {
 	color: white;
 	text-align: center;
 }
+
+h2 {
+    color: grey;
 
 a {
 	outline: none;
@@ -103,4 +114,8 @@ aside {
 	margin-top: 15px;
 	display: flex;
 	justify-content: space-between;
+}
+#hints {
+    float:right;
+    
 }

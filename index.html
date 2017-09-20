@@ -48,41 +48,50 @@
     
     <div class="row">
     	<!-- left size of the container where statistics goes-->
-      <div class="col-md-2">
-          	<p><h1>Statistics:</h1></p>
+      <div class="col-lg-2 col-md-2">
+          	<p><h2>Statistics:</h2></p>
             <div class="colContent">
                 <h4>Overall Wins: </h4>
                 <h4 id="winsCounter">0</h4>
               	<h4> Remaining gueses: </h4>
                 <h4><span id="remainingGuesses">10</span></h4>
-            </div>  
+            </div> 
+      
+                 <h2 class="hintsLeft">Change:</h2>
+              <div>
+                 <button class="btn btn-link hintsLeft">Theme</button>
+                 <button class="btn btn-link hintsLeft">Background</button>
+                 <button class="btn btn-link hintsLeft">Playlist</button>
+              </div>
     	</div><!--/left side ends-->
       
       <!-- main container with the random word-->
-  		<div class="col-md-8">
+  		<div class="col-lg-8 col-md-8">
           <div class="blocks" id="blocks">
               <p><h1>Best Movies of All Time:</h1></p>
               <div class="colContent">
                     <div class="wrapper" id="finalWord">
-                        <button id="startingButton">Start the Game! Generate the word</button>
+                        <button id="startingButton" class="btn btn-primary center-block">Start the Game! Generate the word</button>
                     </div>
               </div>
           </div>
       </div><!-- /main container ends-->
 			
       <!-- right size of the container where extra goes-->
-  	 	<div class="col-md-2">
-          		<h1>Extra:</h1>
+  	 	<div class="col-lg-2 col-md-2">
+          		<h2 class="hintsRight">Extra:</h2>
         <div class="colContent">
+            
+            <h4>Overall Losses:</h4>
+            <h4 id="lossesCounter">0</h4>
             <h4>Letters Guessed:</h4>
             <h4><span id="lettersGuessed">0</span></h4>
-              </br>
-                <h1>Hints:</h1>
-              </br>
+           
+                <h2 class="hintsRight" id="hints">Hints:</h2>
               <div>
-                <button class="hints">Hint 1</button>
-                <button class="hints">Hint 2</button>
-                <button class="hints">Hint 3</button>
+                <button class="btn btn-link hintsRight">Hint 1</button>
+                <button class="btn btn-link hintsRight">Hint 2</button>
+                <button class="btn btn-link hintsRight">Hint 3</button>
               </div>
         </div>    
       </div> <!-- /right size container ends-->
@@ -101,14 +110,14 @@
     </div>
         
         <div class="col-md-10"> 
-            <div id="alphabetHolder">
-              <h4>Alphabet:</h4>
-            </div>       
+<!--            <div id="buttons">
+                <button id="alphabetHolder">Click for Alphabet</button> 
+            </div> -->
         </div>
      <div class="col-md-1"> 
      </div>   
-    </div>
-</div><!-- /alpabet container ends-->
+    </div><!-- row ends -->
+</div><!-- /container ends-->
 
 <!-- footer start--> 
   <footer class="footer">

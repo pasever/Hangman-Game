@@ -7,7 +7,7 @@ var moviesArray = ["The Godfather", "The Shawshank Redemption",  "Schindler's L
 	"Saving Private Ryan", "Unforgiven", "Raiders of the Lost Ark", "Rocky", "A Streetcar Named Desire", "The Philadelphia Story",
 	"To Kill a Mockingbird", "An American in Paris", "The Best Years of Our Lives", "My Fair Lady", "A Clockwork Orange",
 	"Doctor Zhivago", "The Searchers", "Jaws"
-]
+];
 
 
 var wordInProgress = [];
@@ -49,7 +49,7 @@ function generate() {
 //starting button that hides after click
 $("#startingButton").on("click", function () {
 
-	$("#startingButton").remove();
+	$("#startingButton").hide();
 	generate();
 
 });
@@ -62,7 +62,7 @@ document.onkeyup = function (event) {
 	console.log(guess);
 	correctGuess(guess);
 
-}
+};
 
 
 
@@ -111,20 +111,21 @@ function correctGuess(letter) {
 	wrongBool = false;
 
 }
-	
-console.log("word in progress: ", wordInProgress.join(""));
-console.log("random word: ", randomWord);
+
 // Checks if the word is complete
 function checkWin () {
-	console.log(finalWord.join(''));
-	console.log(randomWord.replace(" ", ""));
-	if ( finalWord.join('') === randomWord.replace(" ", "") ) {
+	console.log('final word: ', finalWord.join(''));
+        const word = randomWord.replace(/\s+/g, "")
+        	console.log('random word: ', word);
+
+	if ( finalWord.join('') == word) {
 		alert("Congratulations! You won!");
 		winsCounter++;
 		console.log(winsCounter);
 		//somehow have to restart the game or add a reset button 		
 	}
 }
+
 
 
 
