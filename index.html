@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+    <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.2.1.js"
-          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-          crossorigin="anonymous">
-  </script>
-      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"
+                integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+                crossorigin="anonymous">
+        </script>
 
-  <title>My Portfolio: Evgheni Pascalov</title>
 
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>My Portfolio: Evgheni Pascalov</title>
 
-</head>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-<body>
+    </head>
 
-<nav id="nav" class="navbar navbar-default">
-  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-	      <a class="navbar-brand" href="">Evgheni Pascalov</a>
-	    </div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/index.html">About</a></li>
-	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a></li>
-	        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/contact.html">Contact</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav>
+    <body>
 
-<div class="container-fluid">
-    
-    <div class="row">
-    	<!-- left size of the container where statistics goes-->
-      <div class="col-lg-2 col-md-2">
-          	<p><h2>Statistics:</h2></p>
-            <div class="colContent">
-                <h4>Overall Wins: </h4>
-                <h4 id="winsCounter">0</h4>
-              	<h4> Remaining gueses: </h4>
-                <h4><span id="remainingGuesses">10</span></h4>
-            </div> 
-      
-                 <h2 class="hintsLeft">Change:</h2>
-              <div>
-                 <button class="btn btn-link hintsLeft">Theme</button>
-                 <button class="btn btn-link hintsLeft">Background</button>
-                 <button class="btn btn-link hintsLeft">Playlist</button>
-              </div>
-    	</div><!--/left side ends-->
-      
-      <!-- main container with the random word-->
-  		<div class="col-lg-8 col-md-8">
-          <div class="blocks" id="blocks">
-              <p><h1>Best Movies of All Time:</h1></p>
-              <div class="colContent">
-                    <div class="wrapper" id="finalWord">
-                        <button id="startingButton" class="btn btn-primary center-block">Start the Game! Generate the word</button>
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="">Evgheni Pascalov</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/index.html">About</a></li>
+                        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a></li>
+                        <li><a href="https://pasever.github.io/Bootstrap-Portfolio/contact.html">Contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- left size of the container where statistics goes-->
+                <div class="col-lg-2 col-md-2">
+                    <p><h2 id="statistics">Statistics:</h2></p>
+                    <div class="colContent">
+                        <h4>Wins:</h4>
+                        <h4 id="winsCounter">0</h4>
+                        <h4> Remaining gueses: </h4>
+                        <h4><span id="remainingGuesses">10</span></h4>
+                    </div> 
+
+                    <!--                 <h2 class="hintsLeft">Change:</h2>
+                                  <div>
+                                     <button class="btn btn-link hintsLeft">Theme</button>
+                                     <button class="btn btn-link hintsLeft">Background</button>
+                                     <button class="btn btn-link hintsLeft">Playlist</button>
+                                  </div>-->
+                </div><!--/left side ends-->
+
+                <!-- main container with the random word-->
+                <div class="col-lg-8 col-md-8">
+                    <div class="blocks" id="blocks">
+                        <p><h1>Best Movies of All Time:</h1></p>
+                        <div class="colContent">
+                            <div class="wrapper" id="finalWord">
+                                <button id="startingButton" class="btn btn-primary center-block">Start the Game! Generate the word</button>
+                            </div>
+                        </div>
                     </div>
-              </div>
-          </div>
-      </div><!-- /main container ends-->
-			
-      <!-- right size of the container where extra goes-->
-  	 	<div class="col-lg-2 col-md-2">
-          		<h2 class="hintsRight">Extra:</h2>
-        <div class="colContent">
-            
-            <h4>Overall Losses:</h4>
-            <h4 id="lossesCounter">0</h4>
-            <h4>Letters Guessed:</h4>
-            <h4><span id="lettersGuessed">0</span></h4>
-           
-                <h2 class="hintsRight" id="hints">Hints:</h2>
-              <div>
-                <button class="btn btn-link hintsRight">Hint 1</button>
-                <button class="btn btn-link hintsRight">Hint 2</button>
-                <button class="btn btn-link hintsRight">Hint 3</button>
-              </div>
-        </div>    
-      </div> <!-- /right size container ends-->
+                </div><!-- /main container ends-->
 
-    </div>
-  
-  <div class="push"></div>
+                <!-- right size of the container where extra goes-->
+                <div class="col-lg-2 col-md-2">
+                    <h2 id="extra">Extra:</h2>
+                    <div class="colContent">
 
-</div>
+                        <h4>Losses:</h4>
+                        <h4 id="lossesCounter">0</h4>
+                        <h4>Letters Guessed:</h4>
+                        <h4><span id="lettersGuessed">0</span></h4>
 
-<!-- container for the alphabet -->
-<div class="container">
-    <div class="row">
-    
-    <div class="col-md-1">
-    </div>
-        
-        <div class="col-md-10"> 
-<!--            <div id="buttons">
-                <button id="alphabetHolder">Click for Alphabet</button> 
-            </div> -->
+                        <!--                <h2 class="hintsRight" id="hints">Hints:</h2>
+                                      <div>
+                                        <button class="btn btn-link hintsRight">Hint 1</button>
+                                        <button class="btn btn-link hintsRight">Hint 2</button>
+                                        <button class="btn btn-link hintsRight">Hint 3</button>
+                                      </div>-->
+                    </div>    
+                </div> <!-- /right size container ends-->
+
+            </div>
+
+            <div class="push"></div>
+
         </div>
-     <div class="col-md-1"> 
-     </div>   
-    </div><!-- row ends -->
-</div><!-- /container ends-->
 
-<!-- footer start--> 
-  <footer class="footer">
-    
-      <p class="text-center">&copy; Copyright 2017 Evgheni Pascalov</p>
-   
-  </footer><!-- /footer ends-->
+        <!-- container for the alphabet -->
+        <div class="container">
+            <div class="row">
 
-  <!-- Bootstrap JavaScript CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="assets/javascript/game.js"></script>
-  <script src="assets/javascript/keyboard.js"></script>
-</body>
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-10"> 
+                    <!--            <div id="buttons">
+                                    <button id="alphabetHolder">Click for Alphabet</button> 
+                                </div> -->
+                </div>
+                <div class="col-md-1"> 
+                </div>   
+            </div><!-- row ends -->
+        </div><!-- /container ends-->
+
+        <!-- footer start--> 
+        <footer class="footer">
+
+            <p class="text-center">&copy; Copyright 2017 Evgheni Pascalov</p>
+
+        </footer><!-- /footer ends-->
+
+        <!-- Bootstrap JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+        <script src="assets/javascript/keyboard.js"></script>
+    </body>
 
 </html>

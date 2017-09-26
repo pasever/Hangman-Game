@@ -1,18 +1,26 @@
 body {
-	font-size: 14.5px;
-	padding-top: 5px;
-	opacity: 100% !important;
-	line-height: 1.52947;
-	background: #3E5368;
-	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
-	margin-bottom: 50px;
+    font-size: 14.5px;
+    padding-top: 5px;
+    opacity: 100% !important;
+    line-height: 1.52947;
+    background: #3E5368;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+    margin-bottom: 50px;
 }
 
 .footer {
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  padding: 25px 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 25px 0;
+}
+
+#statistics {
+    text-align: center;
+}
+
+#extra{
+    text-align:center;
 }
 /*#alphabetHolder {
     width: 300px;
@@ -23,21 +31,21 @@ body {
 }*/
 
 #blocks {
-/*	text-align: content;*/
-        font-size: 25px;
-	font-weight: bold;
+    /*	text-align: content;*/
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .colContent {
-	padding-top: 2%;
-	margin: 0 auto;	
+    padding-top: 2%;
+    margin: 0 auto;	
 }
 
 .hintsLeft, .hintsRight {
 
-	width: 80%;
-	height: 50px;
-        float: left;
+    width: 80%;
+    height: 50px;
+    float: left;
 }
 .hintsRight {
     float: right;
@@ -49,73 +57,73 @@ body {
 }
 
 #startingButton {
-	width: 450px;
-	height: 50px;
-	text-align: center;
-        font-size: 18px;
+    width: 450px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
 }
 
 button {
-	width: 75px;
-	height: 75px;
-	margin: 1px;
-	display: inline-block;
-	vertical-align: middle;
-	font-weight: bold;
+    width: 75px;
+    height: 75px;
+    margin: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
 }
 
 h1, h3, h4 {
-	color: white;
-	text-align: center;
+    color: white;
+    text-align: center;
 }
 
 h2 {
     color: grey;
 
-a {
-	outline: none;
-}
+    a {
+        outline: none;
+    }
 
-.gap {
-	margin-right: 37.5px;
-}
+    .gap {
+        margin-right: 37.5px;
+    }
 
-.navbar-brand {
-	font-size: 1.75em !important;
-	font-weight: bold;
-}
+    .navbar-brand {
+        font-size: 1.75em !important;
+        font-weight: bold;
+    }
 
-.nav li {
-	font-size: 1.25em !important;
-	font-weight: normal;
-}
-.keyDisplayed {
-	width: 120px;
-	height: 120px;
-	margin:auto;
-    display:block;
-	
+    .nav li {
+        font-size: 1.25em !important;
+        font-weight: normal;
+    }
+    .keyDisplayed {
+        width: 120px;
+        height: 120px;
+        margin:auto;
+        display:block;
 
-}
-section p {
-	line-height: 190%;
-}
 
-p {
-	color: white;
-}
+    }
+    section p {
+        line-height: 190%;
+    }
 
-aside {
-	margin-top: 5px;
-	background: #3E5368;
-}
+    p {
+        color: white;
+    }
 
-#panel-body {
-	margin-top: 15px;
-	display: flex;
-	justify-content: space-between;
-}
-#hints {
-    float:right;
-    
-}
+    aside {
+        margin-top: 5px;
+        background: #3E5368;
+    }
+
+    #panel-body {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #hints {
+        float:right;
+
+    }
