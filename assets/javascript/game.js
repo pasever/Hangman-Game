@@ -14,6 +14,7 @@ var wordInProgress = [];
 var finalWord = [];
 var remainingGuesses = 10;
 var winsCounter = 0;
+var lossesCounter = 0;
 var lettersGuessed = 0;
 var lettersGuessedArray = ["blank"];
 var lettersIncorrectArray = [];
@@ -58,8 +59,6 @@ $("#startingButton").on("click", function () {
 document.onkeyup = function (event) {
 
     var guess = String.fromCharCode(event.keyCode).toUpperCase();
-
-    console.log(guess);
     correctGuess(guess);
 
 };
@@ -81,6 +80,7 @@ function correctGuess(letter) {
             wordInProgress[cur].innerHTML = letter;
             finalWord[cur] = letter;
             checkWin();
+            checkLose();
 
 
 
@@ -131,15 +131,23 @@ function checkWin() {
     }
 }
 
+function checkLose() {
+    document.getElementById("remainingGuesses").innerHTML = remainingGuesses;
+    if (remainingGuesses == 0) {
+        lossesCounter++;
+        alert("Game over!");
+        $("#lossesCounter").html(lossesCounter);
+        reset();
+
+
+        //somehow have to restart the game or add a reset button 		
+    }
+}
+
 function reset() {
 
 //  $("#startingButton").show(); 
-    document.getElementById('blocks').removeChild();
-
-
-
-
-
+    //document.getElementById('blocks').removeChild();
 }
 
 
